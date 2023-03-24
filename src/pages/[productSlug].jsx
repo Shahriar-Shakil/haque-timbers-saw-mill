@@ -2,29 +2,37 @@ import Layout from '@/components/layout'
 import ProductPageContent from '@/components/products/ProductPage'
 import Skeleton from '@/components/ui/Skeleton'
 import { client } from '@/lib/contentful/client'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-const ProductPage = ({ product, categories, relatedProducts }) => {
+const ProductPage = ({ product, categories }) => {
   const router = useRouter()
+  const { productSlug } = router.query
   return (
-    <Layout categories={categories}>
-      <section className=''>
-        <div className='container'>
-          <article className=''>
-            {router.isFallback ? (
-              <Skeleton />
-            ) : (
-              <>
-                <ProductPageContent
-                  product={product}
-                  // relatedProducts={relatedProducts}
-                />
-              </>
-            )}
-          </article>
-        </div>
-      </section>
-    </Layout>
+    <>
+      <Head>
+        <title key='title'>{productSlug}</title>
+        <meta key='og:title' property='og:title' content={productSlug} />
+      </Head>
+      <Layout categories={categories}>
+        <section className=''>
+          <div className='container'>
+            <article className=''>
+              {router.isFallback ? (
+                <Skeleton />
+              ) : (
+                <>
+                  <ProductPageContent
+                    product={product}
+                    // relatedProducts={relatedProducts}
+                  />
+                </>
+              )}
+            </article>
+          </div>
+        </section>
+      </Layout>
+    </>
   )
 }
 

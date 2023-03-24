@@ -1,20 +1,41 @@
-import CategoriesCTA from '@/components/Categories/CategoriesCTA'
-import FeaturedProducts from '@/components/FeaturedProducts'
 import CTAsection from '@/components/homePage/CTAsection'
 import Testimonial from '@/components/homePage/Testimonial'
 import Layout from '@/components/layout'
-import BlogSection from '@/components/posts/BlogSection'
 import { client } from '@/lib/contentful/client'
+import Head from 'next/head'
 
-const Homepage = ({ featuredProducts, categories, blogs }) => {
+const Homepage = ({ categories }) => {
   return (
-    <Layout categories={categories}>
-      <CTAsection />
-      <Testimonial />
-      {/* <FeaturedProducts featuredProducts={featuredProducts} />
-      <CategoriesCTA categories={categories} />
-      <BlogSection blogs={blogs} /> */}
-    </Layout>
+    <>
+      <Head>
+        <>
+          <title key='title'>Haque Timbers and Saw mill</title>
+          <meta
+            key='og:title'
+            property='og:title'
+            content={'Haque Timbers and Saw mill'}
+          />
+        </>
+        {/* {metaTags.title && (
+          <>
+            <title key="title">{metaTags.title}</title>
+            <meta key="og:title" property="og:title" content={metaTags.title} />
+          </>
+        )}
+        {metaTags.description && (
+          <>
+            <meta key="description" name="description" content={metaTags.description} />
+            <meta key="og:description" property="og:description" content={metaTags.description} />
+          </>
+        )}
+      */}
+        {/* {robots.length > 0 && <meta key="robots" name="robots" content={robots.join(', ')} />} */}
+      </Head>
+      <Layout categories={categories}>
+        <CTAsection />
+        <Testimonial />
+      </Layout>
+    </>
   )
 }
 export const getStaticProps = async () => {

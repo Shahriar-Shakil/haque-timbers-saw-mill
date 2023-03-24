@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Fragment, useEffect, useState } from 'react'
 import Logo from '../../../public/assets/logo.png'
+import CallMobile from '../ui/CallMobile'
 import ContentfulImage from '../ui/ContentfulImage'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -104,10 +105,7 @@ export default function Header({ categories }) {
           </Link>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          <p title='Call US' className='flex text-yellow-600'>
-            <DevicePhoneMobileIcon className='w-6 h-6' />
-            <a href='tel:+8801718024450'>+8801718024450</a>
-          </p>
+          <CallMobile />
         </div>
       </nav>
       <Dialog

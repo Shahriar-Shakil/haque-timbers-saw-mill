@@ -4,6 +4,7 @@ import hero from '../../../public/assets/hero.jpg'
 import hero1 from '../../../public/assets/hero1.jpg'
 import hero2 from '../../../public/assets/hero2.jpg'
 import hero3 from '../../../public/assets/hero3.jpg'
+import Link from 'next/link'
 
 export default function CTAsection() {
   return (
@@ -27,12 +28,12 @@ export default function CTAsection() {
               wood products while protecting our environment.
             </p>
             <div className='mt-10 flex'>
-              <a
-                href='#'
+              <Link
+                href='/blogs'
                 className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
               >
                 Read More<span aria-hidden='true'>&rarr;</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className='flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents'>
