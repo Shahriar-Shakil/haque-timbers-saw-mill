@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Fragment, useEffect, useState } from 'react'
-import Logo from '../../../public/logo.png'
+import Logo from '../../../public/assets/logo.png'
 import ContentfulImage from '../ui/ContentfulImage'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -29,7 +29,7 @@ export default function Header({ categories }) {
         <div className='flex lg:flex-1'>
           <Link href='/' className='-m-1.5 p-1.5'>
             <ContentfulImage
-              className='w-24 md:w-32 scale-150 md:scale-100 '
+              className='w-24 md:w-32  '
               src={Logo}
               alt='image of managing director of Hoque Timbers'
             />
@@ -119,11 +119,6 @@ export default function Header({ categories }) {
         <div className='fixed inset-0 z-10' />
         <Dialog.Panel className='fixed inset-y-10 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
-            <Link href='/' className='-m-1.5 p-1.5'>
-              <span className='text-2xl font-extrabold text-blue-600'>
-                HAQUE TIMBERS
-              </span>
-            </Link>
             <button
               type='button'
               className='-m-2.5 rounded-md p-2.5 text-gray-700'
