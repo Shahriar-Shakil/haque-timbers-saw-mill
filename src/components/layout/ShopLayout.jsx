@@ -8,7 +8,7 @@ export default function ShopLayout({ categories, children }) {
     <section className=''>
       <div className=''>
         <div className='grid grid-cols-12 gap-4 mt-3 mb-20'>
-          <div className='col-span-2'>
+          <div className='hidden md:col-span-2'>
             <ul className='mb-10'>
               <li className='py-1 text-base uppercase font-bold tracking-wide'>
                 All Categories

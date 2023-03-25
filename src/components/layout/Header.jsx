@@ -17,10 +17,9 @@ function classNames(...classes) {
 export default function Header({ categories }) {
   const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   useEffect(() => {
     setMobileMenuOpen(false)
-  }, [router.pathname])
+  }, [router.asPath])
   return (
     <header className='bg-white sticky top-0 z-50 shadow-md'>
       <nav
