@@ -2,7 +2,7 @@ import Layout from '@/components/layout'
 import ContentfulImage from '@/components/ui/ContentfulImage'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import React from 'react'
-import Image from '../../../public/shaheen.jpg'
+import Image from '../../public/shaheen.jpg'
 const benefits = [
   'Competitive salaries',
   'Flexible work hours',
