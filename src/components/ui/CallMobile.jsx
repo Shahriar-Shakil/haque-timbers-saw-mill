@@ -5,7 +5,7 @@ export default function CallMobile() {
   return (
     <p title='Call US' className='flex text-green-600'>
       <DevicePhoneMobileIcon className='w-6 h-6' />
-      <a href='tel:+8801718024450'>+8801718024450</a>
+      <a href='tel:+8801780503417'>+8801780503417</a>
     </p>
   )
 }
