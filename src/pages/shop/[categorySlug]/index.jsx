@@ -52,9 +52,9 @@ export const getStaticProps = async ({ params }) => {
     return {
       props: {
         categories: response.items,
-        products: productsResponse.items,
-        revalidate: 60
-      }
+        products: productsResponse.items
+      },
+      revalidate: 60 * 10
     }
   } catch (error) {
     return {

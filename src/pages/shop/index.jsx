@@ -49,7 +49,7 @@ export const getStaticProps = async () => {
         categories: response.items,
         products: productResponse.items,
         total: productResponse.total,
-        revalidate: 60
+        revalidate: 60 * 10
       }
     }
   } catch (error) {

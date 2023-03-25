@@ -13,7 +13,7 @@ const Layout = ({ children, categories }) => {
         initial={true}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <div className='relative'>
+        <div className=''>
           <Header categories={categories} />
 
           <motion.main
@@ -21,7 +21,7 @@ const Layout = ({ children, categories }) => {
             initial='initial'
             animate='animate'
             exit='exit'
-            className='container p-8 mb-32 min-h-screen'
+            className='container p-8 mb-32  '
           >
             {children}
           </motion.main>

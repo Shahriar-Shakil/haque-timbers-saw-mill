@@ -63,10 +63,10 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       product: response?.items?.[0],
-      categories: categoriesResponse.items,
+      categories: categoriesResponse.items
       // relatedProducts: relatedProductResponse.items,
-      revalidate: 60
-    }
+    },
+    revalidate: 60 * 10
   }
 }
 
