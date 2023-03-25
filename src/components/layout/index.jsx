@@ -13,7 +13,7 @@ const Layout = ({ children, categories }) => {
         initial={true}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <div className='overscroll-contain'>
+        <div className='overscroll-none'>
           <Header categories={categories} />
           <motion.main
             variants={fadeIn('up')}
