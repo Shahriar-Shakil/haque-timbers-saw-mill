@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/variants'
 import Footer from './Footer'
+import MessengerCustomerChat from 'react-messenger-customer-chat'
 
 const Layout = ({ children, categories }) => {
   return (
@@ -28,6 +29,10 @@ const Layout = ({ children, categories }) => {
           <Footer />
         </div>
       </AnimatePresence>
+      <MessengerCustomerChat
+        pageId='100091314007749'
+        appId='1666002803829805'
+      />
     </>
   )
 }
