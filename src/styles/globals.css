@@ -13,6 +13,7 @@
 
   body {
     @apply flex h-full flex-col text-stone-600;
+    font-family: 'Noto Sans Bengali', sans-serif;
   }
 
   main {

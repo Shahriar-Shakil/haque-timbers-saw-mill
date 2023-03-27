@@ -49,13 +49,13 @@ export default function Header({ categories }) {
           </button>
         </div>
         <Popover.Group className='hidden z-50 lg:flex lg:gap-x-12'>
-          {/* <Link
-            href='/shop'
+          <Link
+            href='/'
             className='text-sm font-semibold leading-6 text-gray-900'
           >
-            Shop
-          </Link> */}
-          <Popover className='relative'>
+            Home
+          </Link>
+          {/* <Popover className='relative'>
             <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
               Products
               <ChevronDownIcon
@@ -89,7 +89,7 @@ export default function Header({ categories }) {
                 </div>
               </Popover.Panel>
             </Transition>
-          </Popover>
+          </Popover> */}
           <Link
             href='/blogs'
             className='text-sm font-semibold leading-6 text-gray-900'
@@ -134,7 +134,7 @@ export default function Header({ categories }) {
                 >
                   Shop
                 </Link> */}
-                <Disclosure as='div' className='-mx-3'>
+                {/* <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
                       <Disclosure.Button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50'>
@@ -160,7 +160,7 @@ export default function Header({ categories }) {
                       </Disclosure.Panel>
                     </>
                   )}
-                </Disclosure>
+                </Disclosure> */}
                 <Link
                   href='/blogs'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
