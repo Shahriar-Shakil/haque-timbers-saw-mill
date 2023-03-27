@@ -21,8 +21,7 @@ const Posts = ({ posts, categories }) => {
         <meta property='og:type' content='article' />
         <meta
           property='og:title'
-          content=' Discover the Best Quality Wood Products in Bangladesh - Haque Timber
-          and Saw Mill Blog'
+          content='Exploring the World of Wood with Haque Timbers and sawmill'
         />
         <meta
           property='og:description'
@@ -143,7 +142,7 @@ export const getStaticProps = async () => {
       posts: response.items,
       categories: categoriesResponse.items
     },
-    revalidate: 60 * 10
+    revalidate: 10
   }
 }
 
