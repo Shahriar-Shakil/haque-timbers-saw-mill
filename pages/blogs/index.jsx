@@ -13,12 +13,24 @@ const Posts = ({ posts, categories }) => {
           Discover the Best Quality Wood Products in Bangladesh - Haque Timber
           and Saw Mill Blog
         </title>
+
         <meta
-          key='og:title'
+          property='og:url'
+          content='https://haquetimbersbd.netlify.app/blogs'
+        />
+        <meta property='og:type' content='article' />
+        <meta
           property='og:title'
-          content={
-            'Explore the world of wood products with Haque Timber and Saw Mill blog. Get expert insights, tips, and latest trends on round logs, swan timber, and more. Discover the premium quality wood products in Bangladesh today!'
-          }
+          content=' Discover the Best Quality Wood Products in Bangladesh - Haque Timber
+          and Saw Mill Blog'
+        />
+        <meta
+          property='og:description'
+          content='Explore the world of wood products with Haque Timber and Saw Mill blog. Get expert insights, tips, and latest trends on round logs, swan timber, and more. Discover the premium quality wood products in Bangladesh today!'
+        />
+        <meta
+          property='og:image'
+          content='https://images.ctfassets.net/3b4yutsngovu/2GX63fLLFkwlCTVXLY9BPH/424dbe3a623bc261f83d7bb7509b6323/hero1.jpg?w=640&q=75'
         />
       </Head>
       <Layout categories={categories}>
