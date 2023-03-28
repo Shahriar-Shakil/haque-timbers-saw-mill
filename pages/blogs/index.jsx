@@ -39,7 +39,7 @@ const Posts = ({ posts, categories }) => {
               <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
                 Exploring the World of Wood
               </h2>
-              <p className='mt-2 text-sm font-normal leading-6 text-gray-600'>
+              <p className='mt-2 text-xs md:text-sm font-normal leading-4 md:leading-6 text-gray-600'>
                 ফার্নিচার তৈরিতে ভালো কাঠের ব্যাপারে সচেতন হওয়া উচিত। গাছ এবং
                 কাঠ সম্পর্কে ধারনা না থাকলে প্রতারিত হতে পারেন। খারাপ কাঠের
                 ফার্নিচার দ্রুত নষ্ট হয়ে যায়। তাছাড়া ভালো কাঠ ছাড়া ভালো মানের

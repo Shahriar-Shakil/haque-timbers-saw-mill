@@ -8,9 +8,9 @@ import { useRouter } from 'next/router'
 
 const Post = ({ post, categories, includes }) => {
   const router = useRouter()
-  const coverImageUrl = post.fields.coverImage.fields.file.url ?? {}
+  const coverImageUrl = post?.fields?.coverImage?.fields?.file?.url ?? {}
   const seoImageUrl = post?.fields?.seo?.fields?.image?.fields?.file?.url ?? {}
-  const title = post.fields.title
+  const title = post?.fields?.title
   const { title: SEOTitle, description } = post?.fields?.seo?.fields ?? {}
   return (
     <>
@@ -22,7 +22,7 @@ const Post = ({ post, categories, includes }) => {
         <meta property='og:title' content={SEOTitle || title} />
         <meta
           property='og:description'
-          content={description || post.fields.excerpt}
+          content={description || post?.fields?.excerpt}
         />
         <meta property='og:image' content={seoImageUrl || coverImageUrl} />
       </Head>
