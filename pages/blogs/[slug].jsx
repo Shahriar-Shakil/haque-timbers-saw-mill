@@ -3,27 +3,46 @@ import PostBody from '@/components/posts/PostBody'
 import PostHeader from '@/components/posts/PostHeader'
 import Skeleton from '@/components/ui/Skeleton'
 import { client } from '@/lib/contentful/client'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 const Post = ({ post, categories, includes }) => {
   const router = useRouter()
+  const coverImageUrl = post.fields.coverImage.fields.file.url ?? {}
+  const seoImageUrl = post?.fields?.seo?.fields?.image?.fields?.file?.url ?? {}
+  const title = post.fields.title
+  const { title: SEOTitle, description } = post?.fields?.seo?.fields ?? {}
   return (
-    <Layout categories={categories}>
-      <section className=''>
-        <div className='container'>
-          <article className='prose mx-auto'>
-            {router.isFallback ? (
-              <Skeleton />
-            ) : (
-              <>
-                <PostHeader post={post} />
-                <PostBody post={post} />
-              </>
-            )}
-          </article>
-        </div>
-      </section>
-    </Layout>
+    <>
+      <Head>
+        <title key='title'>{SEOTitle || title}</title>
+
+        <meta property='og:url' content='https://haquetimbersbd.netlify.app/' />
+        <meta property='og:type' content='article' />
+        <meta property='og:title' content={SEOTitle || title} />
+        <meta
+          property='og:description'
+          content={description || post.fields.excerpt}
+        />
+        <meta property='og:image' content={seoImageUrl || coverImageUrl} />
+      </Head>
+      <Layout categories={categories}>
+        <section className=''>
+          <div className='container'>
+            <article className='prose mx-auto'>
+              {router.isFallback ? (
+                <Skeleton />
+              ) : (
+                <>
+                  <PostHeader post={post} />
+                  <PostBody post={post} />
+                </>
+              )}
+            </article>
+          </div>
+        </section>
+      </Layout>
+    </>
   )
 }
 
@@ -50,7 +69,7 @@ export const getStaticProps = async ({ params, preview = false }) => {
       post: response?.items?.[0],
       categories: categoriesResponse.items
     },
-    revalidate: 60 * 10
+    revalidate: 10
   }
 }
 
