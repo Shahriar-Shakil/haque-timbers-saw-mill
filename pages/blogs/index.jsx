@@ -28,7 +28,7 @@ const Posts = ({ posts, categories }) => {
           content='Explore the world of wood products with Haque Timber and Saw Mill blog. Get expert insights, tips, and latest trends on round logs, swan timber, and more. Discover the premium quality wood products in Bangladesh today!'
         />
         <meta
-          property='og:image'
+          property='og:image:secure'
           content='https://images.ctfassets.net/3b4yutsngovu/2GX63fLLFkwlCTVXLY9BPH/424dbe3a623bc261f83d7bb7509b6323/hero1.jpg?w=640&q=75'
         />
       </Head>

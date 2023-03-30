@@ -29,7 +29,7 @@ const Post = ({ post, categories, includes }) => {
           property='og:description'
           content={description || post?.fields?.excerpt}
         />
-        <meta property='og:image' content={`https:${coverImageUrl}`} />
+        <meta property='og:image:secure' content={`https:${coverImageUrl}`} />
       </Head>
       <Layout categories={categories}>
         <section className=''>
