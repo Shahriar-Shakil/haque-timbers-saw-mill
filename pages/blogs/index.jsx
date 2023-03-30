@@ -75,7 +75,10 @@ const Posts = ({ posts, categories }) => {
                     </div>
                     <div className='group relative'>
                       <h3 className='mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600'>
-                        <Link href={`/blogs/${post.fields.slug}`}>
+                        <Link
+                          shallow={true}
+                          href={`/blogs/${post.fields.slug}`}
+                        >
                           <span className='absolute inset-0' />
                           {post.fields.title}
                         </Link>

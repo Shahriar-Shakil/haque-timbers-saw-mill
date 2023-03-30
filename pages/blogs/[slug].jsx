@@ -11,7 +11,7 @@ const Post = ({ post, categories, includes }) => {
   const router = useRouter()
   const coverImageUrl = post?.fields?.coverImage?.fields?.file?.url
   const title = post?.fields?.title
-  const { title: SEOTitle, description } = post?.fields?.seo?.fields
+  const { title: SEOTitle, description } = post?.fields?.seo?.fields ?? {}
   const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`
   return (
     <>
