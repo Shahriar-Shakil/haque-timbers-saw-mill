@@ -22,7 +22,7 @@ const Post = ({ post, categories, includes }) => {
           name='description'
           content={description || post?.fields?.excerpt}
         />
-        <meta property='og:url' content='https://haquetimbersbd.netlify.app/' />
+        <meta property='og:url' content={baseURL} />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={SEOTitle || title} />
         <meta
