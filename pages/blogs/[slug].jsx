@@ -10,7 +10,6 @@ import { FacebookIcon, FacebookShareButton } from 'next-share'
 const Post = ({ post, categories, includes }) => {
   const router = useRouter()
   const coverImageUrl = post?.fields?.coverImage?.fields?.file?.url
-  const seoImageUrl = post?.fields?.seo?.fields?.image?.fields?.file?.url
   const title = post?.fields?.title
   const { title: SEOTitle, description } = post?.fields?.seo?.fields
   const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`
@@ -30,7 +29,7 @@ const Post = ({ post, categories, includes }) => {
           property='og:description'
           content={description || post?.fields?.excerpt}
         />
-        <meta property='og:image' content={seoImageUrl || coverImageUrl} />
+        <meta property='og:image' content={`https:${coverImageUrl}`} />
       </Head>
       <Layout categories={categories}>
         <section className=''>
