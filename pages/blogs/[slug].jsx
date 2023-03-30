@@ -12,14 +12,17 @@ const Post = ({ post, categories, includes }) => {
   const coverImageUrl = post?.fields?.coverImage?.fields?.file?.url
   const seoImageUrl = post?.fields?.seo?.fields?.image?.fields?.file?.url
   const title = post?.fields?.title
-  const { title: SEOTitle, description } = post?.fields?.seo?.fields ?? {}
+  const { title: SEOTitle, description } = post?.fields?.seo?.fields
   const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`
-  console.log(SEOTitle)
   return (
     <>
       <Head>
-        <title key='title'>{SEOTitle || title}</title>
-
+        <title>{`${SEOTitle || title} । হক টিম্বেরস এন্ড স-মিল`} </title>
+        <meta name='title' content={title} />
+        <meta
+          name='description'
+          content={description || post?.fields?.excerpt}
+        />
         <meta property='og:url' content='https://haquetimbersbd.netlify.app/' />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={SEOTitle || title} />

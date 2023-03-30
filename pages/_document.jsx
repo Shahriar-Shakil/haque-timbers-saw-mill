@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang='bn'>
       <Head>
+        <meta name='brand_name' content='হক টিম্বেরস এন্ড স-মিল, Rangpur' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
