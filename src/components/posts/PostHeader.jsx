@@ -13,19 +13,20 @@ const PostHeader = ({ post }) => {
       <h2>{title}</h2>
 
       <div className=' flex items-center justify-between md:mb-10'>
-        {/* <Avatar name={author.fields.name} picture={author.fields.image} /> */}
+        <Avatar name={author.fields.name} picture={author.fields.image} />
         <DateComponent dateString={date} className='text-sm text-gray-400' />
-        <div className='flex items-center justify-between'>
-          <span className='text-sm text-gray-400 pr-1'></span>
-          <FacebookShareButton
+
+        {/* <div className='flex items-center justify-between'> */}
+        {/* <span className='text-sm text-gray-400 pr-1'></span> */}
+        {/* <FacebookShareButton
             url={baseURL}
             quote={
               'next-share is a social share buttons for your next React apps.'
             }
           >
             <FacebookIcon size={32} round />
-          </FacebookShareButton>
-        </div>
+          </FacebookShareButton> */}
+        {/* </div> */}
       </div>
       <div className='mb-8 md:mb-16 sm:mx-0'>
         <ContentfulImage
@@ -34,10 +35,6 @@ const PostHeader = ({ post }) => {
           width={coverImage.fields.file.details.image.width}
           height={coverImage.fields.file.details.image.height}
         />
-      </div>
-      <div className='flex justify-between items-center md:hidden mb-6'>
-        {/* <Avatar name={author.fields.name} picture={author.fields.picture} /> */}
-        <DateComponent dateString={date} className='text-sm text-gray-400' />
       </div>
     </>
   )

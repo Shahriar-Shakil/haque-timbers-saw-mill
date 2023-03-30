@@ -5,13 +5,16 @@ import Skeleton from '@/components/ui/Skeleton'
 import { client } from '@/lib/contentful/client'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { FacebookIcon, FacebookShareButton } from 'next-share'
 
 const Post = ({ post, categories, includes }) => {
   const router = useRouter()
-  const coverImageUrl = post?.fields?.coverImage?.fields?.file?.url ?? {}
-  const seoImageUrl = post?.fields?.seo?.fields?.image?.fields?.file?.url ?? {}
+  const coverImageUrl = post?.fields?.coverImage?.fields?.file?.url
+  const seoImageUrl = post?.fields?.seo?.fields?.image?.fields?.file?.url
   const title = post?.fields?.title
   const { title: SEOTitle, description } = post?.fields?.seo?.fields ?? {}
+  const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`
+  console.log(SEOTitle)
   return (
     <>
       <Head>
@@ -36,6 +39,17 @@ const Post = ({ post, categories, includes }) => {
                 <>
                   <PostHeader post={post} />
                   <PostBody post={post} />
+                  <div className='mt-10 flex items-center gap-2'>
+                    <p className='m-0 text-sm text-gray-500'>শেয়ার করুনঃ </p>
+                    <FacebookShareButton
+                      url={baseURL}
+                      quote={
+                        'next-share is a social share buttons for your next React apps.'
+                      }
+                    >
+                      <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                  </div>
                 </>
               )}
             </article>
