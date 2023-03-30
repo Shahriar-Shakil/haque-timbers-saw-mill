@@ -5,7 +5,12 @@ export default function Document() {
     <Html lang='bn'>
       <Head>
         <meta name='brand_name' content='হক টিম্বেরস এন্ড স-মিল, Rangpur' />
-        <meta name='fb:app_id' content='100091314007749' />
+        <meta
+          name='keywords'
+          content='saw-mill, best-wood-supplier-bd, কাঠের ব্লগ, হক টিম্বেরস এন্ড স-মিল'
+        />
+
+        <meta property='fb:app_id' content='100091314007749' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link

@@ -8,14 +8,29 @@ const Homepage = ({ categories }) => {
   return (
     <>
       <Head>
+        <title key='title'>Haque Timbers and Saw mill</title>
+
         <>
-          <title key='title'>Haque Timbers and Saw mill</title>
+          <meta property='og:title' content={'Haque Timbers and Saw mill'} />
           <meta
-            key='og:title'
-            property='og:title'
-            content={'Haque Timbers and Saw mill'}
+            property='og:url'
+            content='https://haquetimbersbd.netlify.app/'
           />
+          <meta property='og:type' content='article' />
+          <meta
+            property='og:title'
+            content='Exploring the World of Wood with Haque Timbers and sawmill'
+          />
+          <meta
+            property='og:description'
+            content='আমারা সব ধরনের কাঠের সরবরাহকারী এবং কাঠের তৈরি সব ধরনের ফার্নিচার আমাদের কাছে পাবেন।'
+          />
+          {/* <meta
+          property='og:image:secure'
+          content='https://images.ctfassets.net/3b4yutsngovu/2GX63fLLFkwlCTVXLY9BPH/424dbe3a623bc261f83d7bb7509b6323/hero1.jpg?w=640&q=75'
+        /> */}
         </>
+
         {/* {metaTags.title && (
           <>
             <title key="title">{metaTags.title}</title>
