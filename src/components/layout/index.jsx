@@ -21,20 +21,18 @@ const Layout = ({ children, categories }) => {
       >
         <div className='overscroll-none'>
           <Header categories={categories} />
-          {/* <LocomotiveScrollProvider options={options} containerRef={ref}> */}
           <motion.main
             variants={fadeIn('up')}
             initial='initial'
             animate='animate'
             exit='exit'
-            className='container p-8 mb-32  '
+            className='container px-2 sm:px-8 py-8 mb-32 mx-auto  max-w-[75rem] bg-light-alpha-25 backdrop-blur-[20px] mt-[60px] rounded-xl'
             data-scroll-container
             ref={ref}
           >
             {children}
+            <Footer />
           </motion.main>
-          <Footer />
-          {/* </LocomotiveScrollProvider> */}
         </div>
       </AnimatePresence>
     </>

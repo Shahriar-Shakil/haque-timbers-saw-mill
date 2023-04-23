@@ -15,6 +15,7 @@
     @apply overflow-x-hidden text-base bg-gradient-to-br from-accent-light-100 to-accent-light-200 bg-fixed;
     @apply flex h-full flex-col text-stone-600 bg-fixed;
     font-family: 'Poppins', sans-serif;
+    padding: 2.2rem 1rem;
   }
 
   main {
@@ -119,4 +120,19 @@ html.has-scroll-dragging {
 [data-scroll-direction='horizontal'] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
+}
+/* Buttons */
+
+.button-primary {
+  @apply leading-normal bg-light-alpha-25 border border-light-alpha-40 inline-flex items-center gap-1 text-main-color font-medium capitalize text-base cursor-pointer select-none relative overflow-hidden align-middle transition-[color] duration-[0.3s] ease-[ease] px-[1.75em] py-[0.625em] rounded-[1.875rem] border-solid  hover:text-white;
+}
+.button-primary::before {
+  @apply content-[""] absolute top-0 left-0 h-full w-0 bg-main-color -z-10 transition-[width] duration-300;
+}
+.button-primary:hover::before {
+  @apply w-full;
+}
+.button-circle {
+  @apply button-primary  w-10 h-10 rounded-full flex items-center justify-center;
+  padding: 0 !important;
 }

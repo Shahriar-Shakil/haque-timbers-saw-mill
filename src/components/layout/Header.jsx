@@ -3,12 +3,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Logo from '../../../public/assets/logo.png'
 import CallMobile from '../ui/CallMobile'
-import ContentfulImage from '../ui/ContentfulImage'
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Header({ categories }) {
   const router = useRouter()
@@ -17,9 +12,9 @@ export default function Header({ categories }) {
     setMobileMenuOpen(false)
   }, [router.asPath])
   return (
-    <header className=' top-0 z-50 shadow-md'>
+    <header className='sticky top-0 z-50  max-w-[75rem] mx-auto'>
       <nav
-        className='mx-auto max-h-24 flex max-w-7xl items-center justify-between p-6 lg:px-8'
+        className='mx-auto max-h-24 flex max-w-7xl items-center justify-between p-6 py-3 lg:px-8 bg-light-alpha-25 backdrop-blur-[20px] border-t-0  rounded-md'
         aria-label='Global'
       >
         {/* <div className='flex lg:flex-1'></div> */}
@@ -53,12 +48,17 @@ export default function Header({ categories }) {
           >
             About us
           </Link>
-          <Link
-            href='#contacts'
+          <button
             className='text-sm font-semibold leading-6 text-gray-900'
+            onClick={() => {
+              router.push({
+                pathname: '/',
+                hash: 'contacts'
+              })
+            }}
           >
             Contacts
-          </Link>
+          </button>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <CallMobile />
