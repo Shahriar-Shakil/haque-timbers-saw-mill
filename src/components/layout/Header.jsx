@@ -1,12 +1,8 @@
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-  ChevronDownIcon,
-  DevicePhoneMobileIcon
-} from '@heroicons/react/20/solid'
+import { Dialog, Popover } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Fragment, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Logo from '../../../public/assets/logo.png'
 import CallMobile from '../ui/CallMobile'
 import ContentfulImage from '../ui/ContentfulImage'
@@ -21,23 +17,12 @@ export default function Header({ categories }) {
     setMobileMenuOpen(false)
   }, [router.asPath])
   return (
-    <header className='bg-white sticky top-0 z-50 shadow-md'>
+    <header className=' top-0 z-50 shadow-md'>
       <nav
         className='mx-auto max-h-24 flex max-w-7xl items-center justify-between p-6 lg:px-8'
         aria-label='Global'
       >
-        <div className='flex lg:flex-1'>
-          <Link href='/' className='-m-1.5 p-1.5'>
-            <ContentfulImage
-              className='w-24 md:w-32  '
-              src={Logo}
-              alt='image of managing director of Hoque Timbers'
-            />
-            {/* <span className='text-2xl font-extrabold text-blue-600'>
-              Beauty Link
-            </span> */}
-          </Link>
-        </div>
+        {/* <div className='flex lg:flex-1'></div> */}
         <div className='flex lg:hidden'>
           <button
             type='button'
@@ -55,41 +40,7 @@ export default function Header({ categories }) {
           >
             Home
           </Link>
-          {/* <Popover className='relative'>
-            <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
-              Products
-              <ChevronDownIcon
-                className='h-5 w-5 flex-none text-gray-400'
-                aria-hidden='true'
-              />
-            </Popover.Button>
 
-            <Transition
-              as={Fragment}
-              enter='transition ease-out duration-200'
-              enterFrom='opacity-0 translate-y-1'
-              enterTo='opacity-100 translate-y-0'
-              leave='transition ease-in duration-150'
-              leaveFrom='opacity-100 translate-y-0'
-              leaveTo='opacity-0 translate-y-1'
-            >
-              <Popover.Panel className='absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5'>
-                <div className='p-4 '>
-                  {categories?.map(item => (
-                    <Link
-                      key={item.fields.slug}
-                      href={`/shop/${item.fields.slug}`}
-                      className='-m-1.5 p-1.5 block'
-                    >
-                      <span className=' font-extrabold text-blue-black'>
-                        {item.fields.title}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </Popover.Panel>
-            </Transition>
-          </Popover> */}
           <Link
             href='/blogs'
             className='text-sm font-semibold leading-6 text-gray-900'
@@ -101,6 +52,12 @@ export default function Header({ categories }) {
             className='text-sm font-semibold leading-6 text-gray-900'
           >
             About us
+          </Link>
+          <Link
+            href='#contacts'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
+            Contacts
           </Link>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
@@ -128,39 +85,6 @@ export default function Header({ categories }) {
           <div className='mt-6 flow-root'>
             <div className='-my-6 divide-y divide-gray-500/10'>
               <div className='space-y-2 py-6'>
-                {/* <Link
-                  href='/shop'
-                  className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >
-                  Shop
-                </Link> */}
-                {/* <Disclosure as='div' className='-mx-3'>
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50'>
-                        Products
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? 'rotate-180' : '',
-                            'h-5 w-5 flex-none'
-                          )}
-                          aria-hidden='true'
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className='mt-2 space-y-2'>
-                        {categories?.map(item => (
-                          <Link
-                            key={item.fields.slug}
-                            href={`/shop/${item.fields.slug}`}
-                            className='block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                          >
-                            {item.fields.title}
-                          </Link>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure> */}
                 <Link
                   href='/blogs'
                   className='-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'

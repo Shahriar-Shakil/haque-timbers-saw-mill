@@ -1,3 +1,4 @@
+import Contacts from '@/components/homePage/Contacts'
 import CTAsection from '@/components/homePage/CTAsection'
 import Testimonial from '@/components/homePage/Testimonial'
 import Layout from '@/components/layout'
@@ -25,10 +26,6 @@ const Homepage = ({ categories }) => {
             property='og:description'
             content='আমারা সব ধরনের কাঠের সরবরাহকারী এবং কাঠের তৈরি সব ধরনের ফার্নিচার আমাদের কাছে পাবেন।'
           />
-          {/* <meta
-          property='og:image:secure'
-          content='https://images.ctfassets.net/3b4yutsngovu/2GX63fLLFkwlCTVXLY9BPH/424dbe3a623bc261f83d7bb7509b6323/hero1.jpg?w=640&q=75'
-        /> */}
         </>
 
         {/* {metaTags.title && (
@@ -49,6 +46,7 @@ const Homepage = ({ categories }) => {
       <Layout categories={categories}>
         <CTAsection />
         <Testimonial />
+        <Contacts />
       </Layout>
     </>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Testimonial() {
   return (
-    <div className='bg-white py-16 sm:py-24'>
+    <div data-scroll-section className='py-16 sm:py-24'>
       <div className='mx-auto max-w-7xl sm:px-6 lg:px-8'>
         <div className='relative overflow-hidden bg-gray-900 py-20 px-6 shadow-xl sm:rounded-3xl sm:py-24 sm:px-10 md:px-12 lg:px-20'>
           {/* <img
