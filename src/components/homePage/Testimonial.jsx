@@ -47,20 +47,29 @@ export default function Testimonial() {
             />
           </svg>
           <div className='relative mx-auto max-w-2xl lg:mx-0'>
-            <h2>You are welcome</h2>
+            <h2>স্বাগতম!</h2>
             <figure>
               <blockquote className='mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8'>
-                <p>
+                {/* <p>
                   “I am honored to share with you the positive feedback
                   we&apos;ve received from our satisfied customers. Their kind
                   words inspire us to continue providing the best quality wood
                   products and exceptional service. Thank you for considering
                   Haque Timber and Saw Mill for your wood product needs.”
+                </p> */}
+                <p>
+                  “২ যুগের বেশি সময় ধরে আমারা আমাদের গ্রাহকদের সেবা দিয়ে যাচ্ছি।
+                  গ্রাহকদের সন্তুষ্টি আমাদের প্রধান লক্ষ্য তাই এতদিন যাবত এই
+                  ব্যবসা সফলতার সাথে করে যাচ্ছি। যারা আমাদের সাথে এই দীর্ঘ সময়
+                  কাজ করেছেন, আমাদের পাশে থেকেছেন, আমাদের কর্মী/ব্যবসাই ভাইদের
+                  ধন্যবাদ জানাই”
                 </p>
               </blockquote>
               <figcaption className='mt-6 text-base text-white'>
-                <div className='font-semibold'>Hazi Md. Shaheen Anwer</div>
-                <div className='mt-1'>Owner of Haque Timbers and Saw Mill</div>
+                <div className='font-semibold'>হাজী মোঃ শাহিন আনোয়ার</div>
+                <div className='mt-1'>
+                  ব্যবস্থাপনা পরিচালক,হক টিম্বারস এন্ড স-মিল
+                </div>
               </figcaption>
             </figure>
           </div>

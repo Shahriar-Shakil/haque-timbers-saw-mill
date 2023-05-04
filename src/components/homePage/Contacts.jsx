@@ -1,3 +1,4 @@
+import { EnvelopeIcon, PhoneArrowUpRightIcon } from '@heroicons/react/20/solid'
 import React from 'react'
 
 export default function Contacts() {
@@ -9,9 +10,8 @@ export default function Contacts() {
             যোগাযোগ
           </h2>
           <p className='mt-6 text-lg leading-8 text-gray-600'>
-            Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
-            id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
-            fames.
+            প্রশ্ন থাকলে সরাসরি কল করুন অথবা চলে আসুন আমাদের বিজনেস লোকেশনে।
+            ধন্যবাদ
           </p>
         </div>
         <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4'>
@@ -20,6 +20,17 @@ export default function Contacts() {
               হক টিম্বেরস এন্ড স-মিল
             </h3>
             <address className='border-l border-gray-200 pl-6 pt-2 not-italic text-gray-600'>
+              <a className='inline-flex items-center  ' href='tel:01718024450'>
+                <PhoneArrowUpRightIcon className='w-4 h-4 mr-2' />
+                0171-8024450
+              </a>
+              <a
+                className='inline-flex items-center  '
+                href='mailto:haquetimbers@gmail.com'
+              >
+                <EnvelopeIcon className='w-4 h-4 mr-2' />
+                haquetimbers@gmail.com
+              </a>
               <p>পালিচাড়া হাট</p>
               <p>সদর থানা, রংপুর</p>
             </address>

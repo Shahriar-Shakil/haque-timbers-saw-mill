@@ -7,7 +7,7 @@ import Footer from './Footer'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useRef } from 'react'
 
-const Layout = ({ children, categories }) => {
+const Layout = ({ children }) => {
   const ref = useRef(null)
   const options = {
     smooth: true
@@ -20,7 +20,7 @@ const Layout = ({ children, categories }) => {
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <div className='overscroll-none'>
-          <Header categories={categories} />
+          <Header />
           <motion.main
             variants={fadeIn('up')}
             initial='initial'

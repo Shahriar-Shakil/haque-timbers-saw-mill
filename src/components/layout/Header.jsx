@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import CallMobile from '../ui/CallMobile'
 
-export default function Header({ categories }) {
+export default function Header() {
   const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   useEffect(() => {

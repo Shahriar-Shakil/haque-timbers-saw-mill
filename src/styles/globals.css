@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply overflow-x-hidden text-base bg-gradient-to-br from-accent-light-100 to-accent-light-200 bg-fixed;
+    @apply overflow-x-hidden text-base bg-gradient-to-br from-accent-light-200 to-accent-light-200 bg-fixed;
     @apply flex h-full flex-col text-stone-600 bg-fixed;
     font-family: 'Poppins', sans-serif;
     padding: 2.2rem 1rem;

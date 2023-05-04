@@ -51,11 +51,8 @@ const Posts = ({ posts, categories }) => {
             </div>
             <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
               {posts.map(post => (
-                <article
-                  key={post.fields.title}
-                  className='flex flex-col items-start justify-between'
-                >
-                  <div className='relative w-full '>
+                <article key={post.fields.title} className=''>
+                  <div className='relative w-full min-h-60 h-60'>
                     <ContentfulImage
                       alt={`Cover Image for ${post.fields.title}`}
                       src={post.fields.coverImage.fields.file.url}
@@ -65,7 +62,7 @@ const Posts = ({ posts, categories }) => {
                       height={
                         post.fields.coverImage.fields.file.details.image.height
                       }
-                      // className='rounded-md'
+                      className='aspect-video h-full '
                     />
                     <div className='absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10' />
                   </div>
